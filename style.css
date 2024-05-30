@@ -104,6 +104,20 @@ tbody tr:nth-child(even) {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  /* Add a transition duration to the style changes when the mouse hovers over the button */
+  transition-duration: 0.4s;
+}
+/* Add some style changes for when the mouse hovers over the button */
+.btn:hover {
+  background-color: #151580;
+  color: white;
+  border: 1px solid #151580;
+  border-radius: 12px;
+  box-shadow: 0 9px #454343;
+}
+/* Move the button down 5px when clicked to stand out */
+.btn:active {
+  transform: translateY(5px);
 }
 
 button[disabled] {
