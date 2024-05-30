@@ -13,57 +13,55 @@ const collectEmployees = function() {
 
   while (keepAdding) {
     keepAdding = window.confirm("Enter a new employee?");
+      // If the user clicks 'cancel', exit the loop and return the employeesArray.
       if (!keepAdding) {
         return employeesArray;
       }
     
-
       let newFirstName = window.prompt("Enter first name: ");
       
       let newLastName = window.prompt("Enter last name: ");
       
       let newSalary = window.prompt("Enter salary: ");
-      
+      // Convert newSalary to a number before we push it to employeesArray.
       const newSalaryNum = parseInt(newSalary);
-      
+      // Push the employee object to the employeesArray.
       employeesArray.push({firstName: newFirstName, lastName: newLastName, salary: newSalaryNum});
-      
   }
-   
 }
 
-// Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
-  //get employeeSalary and convert to integer, then find and return avgSalary
+  
   let sum = 0;
+  // Loop through the employeesArray and add up all the salaries.
   for (let i = 0; i < employeesArray.length; i++) {
     sum += employeesArray[i].salary; 
   }
-
+  // Divide the sum of all the salaries by the number of objects in employeesArray.
   const avgSalary = sum / employeesArray.length;
   console.log(`The average salary of the employees is ${avgSalary}.`);
-  //return avgSalary;
+  
 }
 
 
-// Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
 
-  // slice firstName and lastName from each employee object (with for loop until employee.lenth)
-  // concatenate first/last names and store in new array
-  // get random name from new array and return random name
   
+  // Create new array to store concatenated first/last names.
   const randomEmployeeArray = [];
   
+  // Iterate through the employeesArray and concatenate first and last names.
   for (let i = 0; i < employeesArray.length; i++) {
     const employeeFirstAndLastName = employeesArray[i].firstName + " " + employeesArray[i].lastName;
+    // Push employee first/last name values to randomEmployeeArray
     randomEmployeeArray.push(employeeFirstAndLastName);
   }
+  // Find a random employee from the randomEmployeeArray.
   const randomEmployee = randomEmployeeArray[Math.floor(Math.random() * randomEmployeeArray.length)];
   console.log(`The winner of the random drawing is ${randomEmployee}.`);
-  //return randomEmployee; 
+  
 }
 
 
