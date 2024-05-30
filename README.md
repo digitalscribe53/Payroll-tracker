@@ -10,5 +10,7 @@ This program is designed to run in the browser and no installation is necessary.
 ![Screenshot](image.png)
 
 
-![Live-Page](https://digitalscribe53.github.io/Payroll-tracker/)
+[Live-page](https://digitalscribe53.github.io/Payroll-tracker/)
+
+
 
